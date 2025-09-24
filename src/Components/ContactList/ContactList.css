@@ -1,0 +1,7 @@
+@media screen and (min-width:1200px){
+    .contactList{
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+}

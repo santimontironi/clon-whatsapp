@@ -1,0 +1,11 @@
+@media screen and (min-width: 1200px) {
+    .screenMessage{
+        height: 100vh;
+        width: 70%;
+        background: url(/src/static/img/fondoChat.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        overflow: hidden;
+    }
+}

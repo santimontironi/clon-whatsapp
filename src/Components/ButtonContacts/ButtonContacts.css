@@ -1,0 +1,18 @@
+.buttonContacts{
+    border: solid 2px #2f3030;
+    border-radius: 20px;
+    padding: 8px;
+    background-color: transparent;
+    color: #929191;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.buttonContacts:hover{
+    background-color: #353535;
+}
+
+.buttonContacts:first-child{
+    background-color: #103529;
+    color: #4fff92;
+}
