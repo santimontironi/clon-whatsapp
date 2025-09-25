@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import MessagesList from "../../Components/MessagesList/MessagesList"
 import NewMessageForm from "../../Components/NewMessageForm/NewMessageForm"
 import { useParams } from "react-router"
@@ -9,7 +9,20 @@ const ScreenMessage = () => {
   const { id_contacto } = useParams()
   const contact = getContactById(id_contacto);
 
-  const [messages, setMessages] = useState(contact.messages)
+  const [messages, setMessages] = useState([])
+  const [loading, setLoading] = useState(false)
+
+  function loadContact() {
+    setLoading(true)
+    setTimeout(() => {
+      setMessages(contact.messages)
+      setLoading(false)
+    }, 1000);
+  }
+
+  useEffect(() => {
+    loadContact()
+  }, [id_contacto])
 
   const onCreateNewMessage = (new_message) => {
     const new_message_object = {
@@ -25,9 +38,13 @@ const ScreenMessage = () => {
 
   return (
     <div className="screenMessage">
-      <h3>{contact.name}</h3>
-      <MessagesList messages={messages} />
-      <NewMessageForm onCreateNewMessage={onCreateNewMessage} />
+      {loading ? <p>Loading...</p>
+        : 
+        <div>
+          <h3>{contact.name}</h3>
+          <MessagesList messages={messages} />
+          <NewMessageForm onCreateNewMessage={onCreateNewMessage} />
+        </div>}
     </div>
   )
 }
