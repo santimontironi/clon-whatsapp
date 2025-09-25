@@ -3,6 +3,8 @@ import MessagesList from "../../Components/MessagesList/MessagesList"
 import NewMessageForm from "../../Components/NewMessageForm/NewMessageForm"
 import { useParams } from "react-router"
 import { getContactById } from "../../services/contactService"
+import ContactLayout from "../../Components/ContactLayout/ContactLayout"
+import './MessageScreen.css'
 
 const ScreenMessage = () => {
 
@@ -38,9 +40,10 @@ const ScreenMessage = () => {
 
   return (
     <div className="screenMessage">
+      <ContactLayout />
       {loading ? <p>Loading...</p>
         : 
-        <div>
+        <div className="screenMessage-content">
           <h3>{contact.name}</h3>
           <MessagesList messages={messages} />
           <NewMessageForm onCreateNewMessage={onCreateNewMessage} />

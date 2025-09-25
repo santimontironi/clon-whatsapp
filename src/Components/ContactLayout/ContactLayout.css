@@ -1,0 +1,13 @@
+@media screen and (min-width:1200px) {
+    .contact-layout-content {
+        display: flex;
+        flex-direction: row;
+        width: 30%;
+    }
+
+    .contact-layout {
+        height: 100vh;
+        background-color: #161717;
+        width: 100%;
+    }
+}
