@@ -44,7 +44,6 @@ const ScreenMessage = () => {
       {loading ? <p>Loading...</p>
         : 
         <div className="screenMessage-content">
-          <h3>{contact.name}</h3>
           <MessagesList messages={messages} />
           <NewMessageForm onCreateNewMessage={onCreateNewMessage} />
         </div>}

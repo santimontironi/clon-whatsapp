@@ -1,0 +1,39 @@
+.message-container {
+  display: flex;
+  padding: 20px 20px 0 20px;
+}
+
+.message-container-left {
+  justify-content: flex-start; 
+}
+
+.message-container-right {
+  justify-content: flex-end; 
+}
+
+.message-container-left div , .message-container-right div{
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 240px;
+  color: #fff;
+  min-height: 55px;
+  max-height: 70px;
+}
+
+.message-container-left div {
+  background-color: #242626;
+  position: relative;
+}
+
+.message-container-right div {
+  background-color: #144D37;
+  position: relative;
+}
+
+.message-container-content-date{
+    position: absolute;
+    bottom: 4px;
+    right: 10px;
+    font-size: 12px;
+    color: #929191;
+}
