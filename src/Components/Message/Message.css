@@ -1,6 +1,7 @@
 .message-container {
   display: flex;
   padding: 20px 20px 0 20px;
+  width: 100%;
 }
 
 .message-container-left {
@@ -9,6 +10,7 @@
 
 .message-container-right {
   justify-content: flex-end; 
+  width: 100%;
 }
 
 .message-container-left div , .message-container-right div{
@@ -18,6 +20,7 @@
   color: #fff;
   min-height: 55px;
   max-height: 70px;
+  word-wrap: break-word;
 }
 
 .message-container-left div {

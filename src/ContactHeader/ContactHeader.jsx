@@ -1,6 +1,8 @@
 import { CiVideoOn } from "react-icons/ci";
 import { SlOptionsVertical } from "react-icons/sl";
 import { IoSearchOutline } from "react-icons/io5";
+import { IoArrowBackOutline } from "react-icons/io5";
+import { Link } from "react-router";
 import './ContactHeader.css'
 
 const ContactHeader = ({photo,name,last_connection,is_connected}) => {
@@ -8,6 +10,9 @@ const ContactHeader = ({photo,name,last_connection,is_connected}) => {
     <header className="contactHeader">
         <div className="contactHeader-content">
             <div className="contactHeader-content-userData">
+                <Link to="/" className="back-arrow">
+                    <IoArrowBackOutline size={22} color="#fff"/>
+                </Link>
                 <img src={photo} alt="profile_photo" />
                 <div className='contactHeader-content-userData-data'>
                     <span className='contactHeader-content-userData-data-name'>{name}</span>

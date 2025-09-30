@@ -1,23 +1,50 @@
-@media screen and (min-width:1200px){
-    .home-screen{
-        width: 100%;
+.home-screen-empty {
+    display: none;
+}
+
+.home-screen {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.home-screen-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.contact-list {
+    height: 100%;
+    background-color: #161717;
+    width: 100%;
+}
+
+@media screen and (min-width: 300px) and (max-width: 767px) {
+    .home-screen {
+        padding-bottom: 60px; /* Espacio para el SideNav */
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .home-screen {
         height: 100vh;
-        display: flex;
         flex-direction: row;
     }
-    .home-screen-content{
-        display: flex;
+    
+    .home-screen-content {
         flex-direction: row;
-        width: 30%;
+        width: 40%;
     }
-    .contact-list{
+    
+    .contact-list {
         height: 100vh;
-        background-color: #161717;
-        width: 100%;
     }
-    .home-screen-empty{
+    
+    .home-screen-empty {
         height: 100vh;
-        width: 70%;
+        width: 190%;
         background-color: #161717;
         display: flex;
         flex-direction: column;
@@ -25,18 +52,22 @@
         align-items: center;
         color: #ffffff;
     }
-    .home-screen-empty img{
-        width: 320px;
+    
+    .home-screen-empty img {
+        width: 280px;
     }
-    .home-screen-empty h2{
+    
+    .home-screen-empty h2 {
         font-weight: 200;
-        font-size: 40px;
+        font-size: 32px;
     }
-    .home-screen-empty p{
-        width: 600px;
+    
+    .home-screen-empty p {
+        width: 80%;
         text-align: center;
     }
-    .home-screen-empty button{
+    
+    .home-screen-empty button {
         margin-top: 30px;
         background-color: #21C063;
         border-radius: 50px;
@@ -45,7 +76,49 @@
         border: none;
         cursor: pointer;
     }
-    .home-screen-empty button:hover{
+}
+
+/* Pantallas grandes (1200px - 1439px) */
+@media screen and (min-width: 1200px) {
+    .home-screen-content {
+        width: 30%;
+    }
+    
+    .home-screen-empty {
+        width: 70%;
+    }
+    
+    .home-screen-empty img {
+        width: 320px;
+    }
+    
+    .home-screen-empty h2 {
+        font-size: 40px;
+    }
+    
+    .home-screen-empty p {
+        width: 600px;
+    }
+}
+
+/* Pantallas muy grandes (1440px en adelante) */
+@media screen and (min-width: 1440px) {
+    .home-screen-content {
+        width: 25%;
+    }
+    
+    .home-screen-empty {
+        width: 75%;
+    }
+    
+    .home-screen-empty img {
+        width: 350px;
+    }
+}
+
+/* Estilos para el botón en hover */
+@media screen and (min-width: 768px) {
+    .home-screen-empty button:hover {
         transition: .4s;
         background-color: #1e9f54;
     }

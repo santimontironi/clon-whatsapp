@@ -1,17 +1,84 @@
-@media screen and (min-width: 1200px) {
-    .screenMessage{
-        height: 100vh;
+/* Estilos base para todos los tamaños de pantalla */
+.screenMessage {
+    width: 100%;
+    height: 100vh;
+    background: url(/public/img/fondoChat.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.screenMessage-content {
+    position: relative;
+}
+
+/* Móvil (300px - 767px) */
+@media screen and (min-width: 300px) and (max-width: 767px) {
+    .screenMessage {
+        flex-direction: column;
+    }
+    
+    .screenMessage-content {
         width: 100%;
-        background: url(/public/img/fondoChat.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
+        height: calc(100vh - 60px); /* Resta la altura del SideNav */
+        padding-top: 80px; /* Espacio para el ContactHeader */
+        padding-bottom: 60px; /* Espacio para el NewMessageForm */
         overflow: hidden;
-        display: flex;
+    }
+    
+    .screenMessage > div:first-child {
+        display: none; /* Oculta el ContactLayout en móvil */
+    }
+}
+
+/* Tablet (768px - 1199px) */
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .screenMessage {
         flex-direction: row;
     }
-    .screenMessage-content{
+    
+    .screenMessage > div:first-child {
+        width: 40%;
+    }
+    
+    .screenMessage-content {
+        width: 60%;
+        height: 100vh;
+    }
+}
+
+/* Pantallas grandes (1200px - 1439px) */
+@media screen and (min-width: 1200px) and (max-width: 1439px) {
+    .screenMessage {
+        flex-direction: row;
+    }
+    
+    .screenMessage > div:first-child {
+        width: 30%;
+    }
+    
+    .screenMessage-content {
         width: 70%;
         height: 100vh;
-        position: relative;
+    }
+}
+
+/* Pantallas muy grandes (1440px en adelante) */
+@media screen and (min-width: 1440px) {
+    .screenMessage {
+        flex-direction: row;
+    }
+    
+    .screenMessage > div:first-child {
+        width: 25%;
+    }
+    
+    .screenMessage-content {
+        width: 75%;
+        height: 100vh;
     }
 }

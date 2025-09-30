@@ -1,41 +1,149 @@
-@media screen and (min-width:1200px){
-    .contactHeader{
-        width: 100%;
-        height: 80px;
-        padding: 22px 22px 0 22px;
-        background-color: #161717;
+/* Estilos base para todos los tamaños de pantalla (mobile-first) */
+.contactHeader {
+    width: 100%;
+    background-color: #161717;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.contactHeader-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contactHeader-content-userData {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+
+.back-arrow {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5px;
+}
+
+.contactHeader-content-userData img {
+    border-radius: 100px;
+    object-fit: cover;
+}
+
+.contactHeader-content-userData-data {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    color: #fff;
+}
+
+.contactHeader-content-functions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.contactHeader-content-userData-data-is_connected {
+    font-weight: 600;
+    color: #adadad;
+}
+
+/* Móvil (300px - 767px) */
+@media screen and (min-width: 300px) and (max-width: 767px) {
+    .contactHeader {
+        height: 70px;
+        padding: 15px 15px 0 15px;
     }
-    .contactHeader-content{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+    
+    .contactHeader-content-userData img {
+        width: 35px;
+        height: 35px;
     }
-    .contactHeader-content-userData{
-        display: flex;
-        flex-direction: row;
+    
+    .contactHeader-content-functions {
         gap: 15px;
     }
-    .contactHeader-content-userData img{
+    
+    .contactHeader-content-userData-data-is_connected {
+        font-size: 10px;
+    }
+}
+
+/* Tablet (768px - 1199px) */
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .contactHeader {
+        height: 75px;
+        padding: 18px 18px 0 18px;
+    }
+    
+    .contactHeader-content-userData {
+        gap: 12px;
+    }
+    
+    .contactHeader-content-userData img {
+        width: 38px;
+        height: 38px;
+    }
+    
+    .contactHeader-content-functions {
+        gap: 25px;
+    }
+    
+    .contactHeader-content-userData-data-is_connected {
+        font-size: 11px;
+    }
+}
+
+/* Pantallas grandes (1200px - 1439px) */
+@media screen and (min-width: 1200px) and (max-width: 1439px) {
+    .contactHeader {
+        height: 80px;
+        padding: 22px 22px 0 22px;
+    }
+    
+    .contactHeader-content-userData {
+        gap: 15px;
+    }
+    
+    .contactHeader-content-userData img {
         width: 40px;
         height: 40px;
-        border-radius: 100px;
-        object-fit: cover;
     }
-    .contactHeader-content-userData-data{
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-        color: #fff;
-    }
-    .contactHeader-content-functions{
-        display: flex;
-        flex-direction: row;
+    
+    .contactHeader-content-functions {
         gap: 30px;
-        align-items: center;
     }
-    .contactHeader-content-userData-data-is_connected{
+    
+    .contactHeader-content-userData-data-is_connected {
         font-size: 12px;
-        font-weight: 600;
-        color: #adadad;
+    }
+}
+
+/* Pantallas muy grandes (1440px en adelante) */
+@media screen and (min-width: 1440px) {
+    .contactHeader {
+        height: 85px;
+        padding: 25px 25px 0 25px;
+    }
+    
+    .contactHeader-content-userData {
+        gap: 18px;
+    }
+    
+    .contactHeader-content-userData img {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .contactHeader-content-functions {
+        gap: 35px;
+    }
+    
+    .contactHeader-content-userData-data-is_connected {
+        font-size: 13px;
     }
 }

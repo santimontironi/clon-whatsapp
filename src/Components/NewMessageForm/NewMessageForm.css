@@ -1,48 +1,137 @@
-@media screen and (min-width:1200px) {
-    .newMessageForm{
-        position: absolute;
+.newMessageForm {
+    position: absolute;
+    bottom: -30px;
+    width: 95%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.newMessageForm form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+}
+
+.newMessageForm form input {
+    width: 100%;
+    border-radius: 20px;
+    background-color: #242626;
+    border: none;
+    color: #fff;
+}
+
+.newMessageForm form input:focus {
+    outline: none;
+}
+
+.newMessageForm-left-button {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.newMessageForm-right-button {
+    position: absolute;
+    right: 15px;
+    top: 0;
+    transform: translateY(50%);
+}
+
+.newMessageForm-right-button button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* Móvil (300px - 767px) */
+@media screen and (min-width: 300px) and (max-width: 767px) {
+    .newMessageForm {
+        bottom: 10px;
+        width: 92%;
+    }
+    
+    .newMessageForm form input {
+        height: 45px;
+        padding: 12px 12px 12px 80px;
+        font-size: 15px;
+    }
+    
+    .newMessageForm-left-button {
+        gap: 8px;
+        left: 12px;
+    }
+}
+
+/* Tablet (768px - 1199px) */
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .newMessageForm {
+        bottom: 8px;
+        width: 95%;
+    }
+    
+    .newMessageForm form input {
+        height: 48px;
+        padding: 14px 14px 14px 90px;
+        font-size: 16px;
+    }
+    
+    .newMessageForm-left-button {
+        gap: 10px;
+        left: 15px;
+    }
+}
+
+/* Pantallas grandes (1200px - 1439px) */
+@media screen and (min-width: 1200px) and (max-width: 1439px) {
+    .newMessageForm {
         bottom: 10px;
         width: 97%;
         left: 20px;
+        transform: none;
     }
-    .newMessageForm form{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        position: relative;
-    }
-    .newMessageForm form input{
-        width: 100%;
+    
+    .newMessageForm form input {
         height: 50px;
-        border-radius: 20px;
-        background-color: #242626;
-        border: none;
         padding: 15px 15px 15px 100px;
-        color: #fff;
         font-size: 17px;
     }
-    .newMessageForm form input:focus{
-        outline: none;
-    }
-    .newMessageForm-left-button{
-        display: flex;
-        flex-direction: row;
+    
+    .newMessageForm-left-button {
         gap: 12px;
-        position: absolute;
         left: 20px;
-        top: 50%;
-        transform: translateY(-50%);
-        cursor: pointer;
     }
-    .newMessageForm-right-button{
-        position: absolute;
+    
+    .newMessageForm-right-button {
         right: 20px;
-        top: 0;
-        transform: translateY(50%);
     }
-    .newMessageForm-right-button button{
-        background-color: transparent;
-        border: none;
-        cursor: pointer;
+}
+
+/* Pantallas muy grandes (1440px en adelante) */
+@media screen and (min-width: 1440px) {
+    .newMessageForm {
+        bottom: 12px;
+        width: 97%;
+        left: 20px;
+        transform: none;
+    }
+    
+    .newMessageForm form input {
+        height: 55px;
+        padding: 18px 18px 18px 110px;
+        font-size: 18px;
+    }
+    
+    .newMessageForm-left-button {
+        gap: 15px;
+        left: 25px;
+    }
+    
+    .newMessageForm-right-button {
+        right: 25px;
     }
 }
