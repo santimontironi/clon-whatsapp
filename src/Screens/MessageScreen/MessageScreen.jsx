@@ -1,42 +1,14 @@
-import { useEffect, useState } from "react"
 import MessagesList from "../../Components/MessagesList/MessagesList"
 import NewMessageForm from "../../Components/NewMessageForm/NewMessageForm"
-import { useParams } from "react-router"
-import { getContactById } from "../../services/contactService"
 import ContactLayout from "../../Components/ContactLayout/ContactLayout"
+import { useContext } from "react"
+import { ContactDetailContext } from "../../Context/ContactDetailContext"
 import './MessageScreen.css'
 
 const ScreenMessage = () => {
 
-  const { id_contacto } = useParams()
-  const contact = getContactById(id_contacto);
+  const {loading,contactDetail,onCreateNewMessage} = ContactDetailContext()
 
-  const [messages, setMessages] = useState([])
-  const [loading, setLoading] = useState(false)
-
-  function loadContact() {
-    setLoading(true)
-    setTimeout(() => {
-      setMessages(contact.messages)
-      setLoading(false)
-    }, 1000);
-  }
-
-  useEffect(() => {
-    loadContact()
-  }, [id_contacto])
-
-  const onCreateNewMessage = (new_message) => {
-    const new_message_object = {
-      content: new_message,
-      author: 'YO',
-      timestamp: '19:00',
-      id: messages.length + 1
-    }
-    const messages_cloned = [...messages]
-    messages_cloned.push(new_message_object)
-    setMessages(messages_cloned)
-  }
 
   return (
     <div className="screenMessage">
@@ -44,7 +16,7 @@ const ScreenMessage = () => {
       {loading ? <p>Loading...</p>
         : 
         <div className="screenMessage-content">
-          <MessagesList messages={messages} />
+          <MessagesList messages={contactDetail.messages} />
           <NewMessageForm onCreateNewMessage={onCreateNewMessage} />
         </div>}
     </div>
