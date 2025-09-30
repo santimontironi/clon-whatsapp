@@ -16,7 +16,7 @@
     position: relative;
 }
 
-/* Móvil (300px - 767px) */
+
 @media screen and (min-width: 300px) and (max-width: 767px) {
     .screenMessage {
         flex-direction: column;
@@ -24,18 +24,18 @@
     
     .screenMessage-content {
         width: 100%;
-        height: calc(100vh - 60px); /* Resta la altura del SideNav */
-        padding-top: 80px; /* Espacio para el ContactHeader */
-        padding-bottom: 60px; /* Espacio para el NewMessageForm */
+        height: calc(100vh - 60px);
+        padding-top: 80px;
+        padding-bottom: 60px; 
         overflow: hidden;
     }
     
     .screenMessage > div:first-child {
-        display: none; /* Oculta el ContactLayout en móvil */
+        display: none; 
     }
 }
 
-/* Tablet (768px - 1199px) */
+
 @media screen and (min-width: 768px) and (max-width: 1199px) {
     .screenMessage {
         flex-direction: row;
@@ -51,7 +51,7 @@
     }
 }
 
-/* Pantallas grandes (1200px - 1439px) */
+
 @media screen and (min-width: 1200px) and (max-width: 1439px) {
     .screenMessage {
         flex-direction: row;
@@ -67,7 +67,7 @@
     }
 }
 
-/* Pantallas muy grandes (1440px en adelante) */
+
 @media screen and (min-width: 1440px) {
     .screenMessage {
         flex-direction: row;

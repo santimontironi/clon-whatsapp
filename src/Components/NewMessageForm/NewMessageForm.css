@@ -48,8 +48,8 @@
     cursor: pointer;
 }
 
-/* Móvil (300px - 767px) */
-@media screen and (min-width: 300px) and (max-width: 767px) {
+
+@media screen and (min-width: 300px) {
     .newMessageForm {
         bottom: 10px;
         width: 92%;
@@ -67,8 +67,8 @@
     }
 }
 
-/* Tablet (768px - 1199px) */
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+
+@media screen and (min-width: 768px) {
     .newMessageForm {
         bottom: 8px;
         width: 95%;
@@ -86,8 +86,8 @@
     }
 }
 
-/* Pantallas grandes (1200px - 1439px) */
-@media screen and (min-width: 1200px) and (max-width: 1439px) {
+
+@media screen and (min-width: 1200px) {
     .newMessageForm {
         bottom: 10px;
         width: 97%;
@@ -111,7 +111,7 @@
     }
 }
 
-/* Pantallas muy grandes (1440px en adelante) */
+
 @media screen and (min-width: 1440px) {
     .newMessageForm {
         bottom: 12px;

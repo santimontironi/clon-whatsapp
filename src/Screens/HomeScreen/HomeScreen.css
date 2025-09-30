@@ -23,7 +23,7 @@
 
 @media screen and (min-width: 300px) and (max-width: 767px) {
     .home-screen {
-        padding-bottom: 60px; /* Espacio para el SideNav */
+        padding-bottom: 60px; 
     }
 }
 
@@ -78,7 +78,7 @@
     }
 }
 
-/* Pantallas grandes (1200px - 1439px) */
+
 @media screen and (min-width: 1200px) {
     .home-screen-content {
         width: 30%;
@@ -101,7 +101,7 @@
     }
 }
 
-/* Pantallas muy grandes (1440px en adelante) */
+
 @media screen and (min-width: 1440px) {
     .home-screen-content {
         width: 25%;
@@ -116,7 +116,7 @@
     }
 }
 
-/* Estilos para el botón en hover */
+
 @media screen and (min-width: 768px) {
     .home-screen-empty button:hover {
         transition: .4s;
