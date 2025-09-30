@@ -1,4 +1,3 @@
-/* Estilos base para todos los tamaños de pantalla (mobile-first) */
 .contactHeader {
     width: 100%;
     background-color: #161717;
@@ -50,6 +49,12 @@
 .contactHeader-content-userData-data-is_connected {
     font-weight: 600;
     color: #adadad;
+}
+
+.contactHeader-content-userData-data-last_connection{
+    font-weight: 600;
+    color: #adadad;
+    font-size: 11px;
 }
 
 

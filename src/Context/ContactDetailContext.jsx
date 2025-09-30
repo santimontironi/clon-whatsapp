@@ -31,11 +31,10 @@ export const ContactDetailProvider = () => {
             content: new_message,
             author: 'YO',
             timestamp: '19:00',
-            id: messages.length + 1
+            id: contactDetail.messages.length + 1
         }
-        const messages_cloned = [...contactDetail.messages]
-        messages_cloned.push(new_message_object)
-        setContactDetail({...contactDetail,messages_cloned})
+        const messages_cloned = [...contactDetail.messages, new_message_object]
+        setContactDetail({ ...contactDetail, messages: messages_cloned })
     }
 
 
