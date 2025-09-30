@@ -4,6 +4,7 @@ import ContactLayout from "../../Components/ContactLayout/ContactLayout"
 import { useContext } from "react"
 import { ContactDetailContext } from "../../Context/ContactDetailContext"
 import ContactHeader from "../../ContactHeader/ContactHeader"
+import { SyncLoader } from "react-spinners"
 import './MessageScreen.css'
 
 const ScreenMessage = () => {
@@ -13,7 +14,7 @@ const ScreenMessage = () => {
   return (
     <div className="screenMessage">
       <ContactLayout />
-      {loading || !contactDetail ? <p>Loading...</p>
+      {loading || !contactDetail ? <div className="loader"><SyncLoader color="#fff"/></div>
         : 
         <div className="screenMessage-content">
           <ContactHeader 

@@ -8,3 +8,10 @@
     display: flex;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+.loader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
