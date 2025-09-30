@@ -1,4 +1,4 @@
-import notMessages from './../../static/img/notMessages.png'
+import notMessages from '/img/notMessages.png'
 import ContactLayout from "../../Components/ContactLayout/ContactLayout"
 import './HomeScreen.css'
 
@@ -8,7 +8,9 @@ const HomeScreen = () => {
         <ContactLayout/>
         <div className="home-screen-empty">
             <img src={notMessages} alt="notMessage" />
-            <span>Aún no has seleccionado ningún contacto.</span>
+            <h2>Descarga WhatsApp para Windows</h2>
+            <p>Descarga la aplicación para Windows y haz llamadas, comparte pantalla y disfruta de una experiencia mas rápida.</p>
+            <button>Descargar</button>
         </div>
     </div>
   )

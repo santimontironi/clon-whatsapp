@@ -2,7 +2,7 @@ const contacts = [
     {
         id: 1,
         name: 'Cr7',
-        last_time_conneceted: 'Última vez ayer a las 20 hrs',
+        last_time_connected: 'Última vez ayer a las 20 hrs',
         is_connected: false,
         profile_photo: 'https://img.a.transfermarkt.technology/portrait/big/8198-1748102259.jpg?lm=1',
         state: 'De tal palo a tal astilla',
@@ -18,7 +18,7 @@ const contacts = [
     {
         id: 2,
         name: 'Messi',
-        last_time_conneceted: 'Última vez ayer a las 19 hrs',
+        last_time_connected: 'Última vez ayer a las 19 hrs',
         is_connected: true,
         profile_photo: 'https://cdn.conmebol.com/wp-content/uploads/2025/09/000_73GH2L9-1024x683.jpg',
         state: 'Campeón del mundo',

@@ -3,7 +3,7 @@ import { PiUsersThree } from "react-icons/pi";
 import { IoEllipseOutline } from "react-icons/io5";
 import { RiBroadcastLine } from "react-icons/ri";
 import { CiSettings } from "react-icons/ci";
-import myPhoto from "../../static/img/myPhoto.png";
+import myPhoto from "/img/myPhoto.png";
 import './SideNav.css'
 
 const SideNav = () => {

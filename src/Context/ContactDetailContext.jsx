@@ -8,9 +8,23 @@ export const ContactDetailContext = createContext()
 export const ContactDetailProvider = () => {
 
     const [loading, setLoading] = useState(false)
-    const [contactDetail, setContactDetail] = useState([])
+    const [contactDetail, setContactDetail] = useState(null)
 
     const { id_contacto } = useParams()
+
+
+    useEffect(() => {
+        function loadContactById() {
+            setLoading(true)
+            setTimeout(() => {
+                const contact = getContactById(id_contacto)
+                setContactDetail(contact)
+                setLoading(false)
+            }, 1000)
+        }
+        loadContactById()
+    }, [id_contacto])
+
 
     const onCreateNewMessage = (new_message) => {
         const new_message_object = {
@@ -24,17 +38,6 @@ export const ContactDetailProvider = () => {
         setContactDetail({...contactDetail,messages_cloned})
     }
 
-    useEffect(() => {
-        function loadContactById() {
-            setLoading(true)
-            setTimeout(() => {
-                const contact = getContactById(id_contacto)
-                setContactDetail(contact)
-                setLoading(false)
-            }, 1000)
-        }
-        loadContactById()
-    }, [id_contacto])
 
     return <ContactDetailContext.Provider value={{ loading, contactDetail, onCreateNewMessage }}>
         <Outlet />

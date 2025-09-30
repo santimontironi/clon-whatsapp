@@ -1,0 +1,41 @@
+@media screen and (min-width:1200px){
+    .contactHeader{
+        width: 100%;
+        height: 80px;
+        padding: 22px 22px 0 22px;
+        background-color: #161717;
+    }
+    .contactHeader-content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .contactHeader-content-userData{
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+    }
+    .contactHeader-content-userData img{
+        width: 40px;
+        height: 40px;
+        border-radius: 100px;
+        object-fit: cover;
+    }
+    .contactHeader-content-userData-data{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        color: #fff;
+    }
+    .contactHeader-content-functions{
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        align-items: center;
+    }
+    .contactHeader-content-userData-data-is_connected{
+        font-size: 12px;
+        font-weight: 600;
+        color: #adadad;
+    }
+}
