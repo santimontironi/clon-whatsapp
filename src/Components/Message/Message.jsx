@@ -6,8 +6,8 @@ const Message = ({id,author,timestamp,content}) => {
     <div className={`message-container ${author === 'YO' ? 'message-container-right' : 'message-container-left'}`}>
       <div>
           <p>{content}</p>
-          <span className='message-container-content-date'>{timestamp}</span>
-          {author === 'YO' && <IoCheckmarkDone className="message-container-content-checkmark" color="#34B7F1" size={20}/>}
+          <span className={`${author === 'YO' ? 'message-container-content-date-my' : 'message-container-content-date-contact' }`}>{timestamp}</span>
+          {author === 'YO' && <IoCheckmarkDone className="message-container-content-checkmark" color="#34B7F1" size={25}/>}
       </div>
     </div>
   )
