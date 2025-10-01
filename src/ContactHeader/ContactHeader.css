@@ -4,7 +4,6 @@
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 10;
 }
 
 .contactHeader-content {
@@ -58,7 +57,7 @@
 }
 
 
-@media screen and (min-width: 300px) and (max-width: 767px) {
+@media screen and (min-width: 300px) {
     .contactHeader {
         height: 70px;
         padding: 15px 15px 0 15px;
@@ -79,10 +78,11 @@
 }
 
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 768px) {
     .contactHeader {
         height: 75px;
         padding: 18px 18px 0 18px;
+        position: initial;
     }
     
     .contactHeader-content-userData {
@@ -104,10 +104,11 @@
 }
 
 
-@media screen and (min-width: 1200px) and (max-width: 1439px) {
+@media screen and (min-width: 1200px) {
     .contactHeader {
         height: 80px;
         padding: 22px 22px 0 22px;
+        position: initial;
     }
     
     .contactHeader-content-userData {
@@ -133,6 +134,7 @@
     .contactHeader {
         height: 85px;
         padding: 25px 25px 0 25px;
+        position: initial;
     }
     
     .contactHeader-content-userData {

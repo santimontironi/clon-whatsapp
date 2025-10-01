@@ -27,6 +27,7 @@ export const ContactDetailProvider = () => {
 
 
     const onCreateNewMessage = (new_message) => {
+        if (!new_message) return
         const new_message_object = {
             content: new_message,
             author: 'YO',
