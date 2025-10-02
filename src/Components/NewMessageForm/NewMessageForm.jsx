@@ -22,7 +22,7 @@ const NewMessageForm = ({onCreateNewMessage}) => {
                     <IoAddOutline color="#ffffff" size={25} />
                     <PiStickerBold color="#ffffff" size={25} />
                 </div>
-                <input type="text" id='mensaje' name='mensaje' placeholder="Escribe un mensaje" />
+                <input type="text" id='mensaje' name='mensaje' placeholder="Escribe un mensaje" autoComplete="off" />
                 <div className="newMessageForm-right-button">
                     <button type="submit"><IoMdSend color="#ffffff" size={25} /></button>
                 </div>
