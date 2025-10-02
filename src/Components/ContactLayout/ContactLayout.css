@@ -10,6 +10,7 @@
         display: flex;
         flex-direction: column;
         background-color: #161717;
+        width: 100%;
     }
 }
 
@@ -21,7 +22,7 @@
     .contact-layout {
         display: flex;
         flex-direction: column;
-        height: 100vh;
+        height: 100dvh;
         background-color: #161717;
         width: 100%;
         border-right: solid 2px #272929;
