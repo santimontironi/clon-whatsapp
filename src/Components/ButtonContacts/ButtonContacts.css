@@ -20,7 +20,7 @@
 @media screen and ((min-width: 300px) and (max-width: 767px)) {
     .buttonContacts{
         font-size: 10px;
-        padding: 6px;
-        width: 60px;
+        padding: 7px;
+        width: 65px;
     }
 }
