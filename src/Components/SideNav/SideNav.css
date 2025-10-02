@@ -43,9 +43,3 @@
     height: 40px;
     border-radius: 100%;
 }
-
-@media screen and (min-width: 300px) and (max-width: 767px) {
-    .nav{
-        height: 100dvh;
-    }
-}

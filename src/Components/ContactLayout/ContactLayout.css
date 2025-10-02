@@ -22,7 +22,7 @@
     .contact-layout {
         display: flex;
         flex-direction: column;
-        height: 100dvh;
+        height: 100vh;
         background-color: #161717;
         width: 100%;
         border-right: solid 2px #272929;
