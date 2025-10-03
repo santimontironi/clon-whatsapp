@@ -7,6 +7,7 @@ export const ContactListContext = createContext()
 export const ContactListProvider = ({children}) => {
 
     const[contactList,setContactList] = useState([])
+    const[resultsContacts,setResultsContacts] = useState([])
     const[loading,setLoading] = useState(false)
 
     const allContacts = getAllContacts()
@@ -22,8 +23,21 @@ export const ContactListProvider = ({children}) => {
         loadContactList()
     },[])
 
+    function onSearchContact(searchTerm){
+
+        if(searchTerm.trim().length === 0){
+            setResultsContacts([])
+            return
+        }
+
+        const filteredContacts = contactList.filter(contact => 
+            contact.name.toLowerCase().trim().includes(searchTerm.toLowerCase())
+        )
+        setResultsContacts(filteredContacts)
+    }
+
     return(
-        <ContactListContext.Provider value={{contactList,loading}}>
+        <ContactListContext.Provider value={{contactList,loading,onSearchContact,resultsContacts}}>
             {children}
         </ContactListContext.Provider>
     )

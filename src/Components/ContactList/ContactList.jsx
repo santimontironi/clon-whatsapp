@@ -7,12 +7,14 @@ import './ContactList.css'
 
 const ContactList = () => {
 
-  const {contactList,loading} = useContext(ContactListContext)
+  const {contactList,resultsContacts,loading} = useContext(ContactListContext)
+
+  const contactsToShow = resultsContacts.length >= 1 ? resultsContacts : contactList
  
   return (
     <div className="contactList">
       {loading ? <div className="loader"><BeatLoader color="#fff"/></div> :
-        contactList.map((contact) => (
+        contactsToShow.map((contact) => (
           <Link to={`/contacto/` + contact.id} key={contact.id}>
             <Contact photoProfile={contact.profile_photo} name={contact.name} last_time={contact.last_time_conneceted} isConnected={contact.is_connected ? 'En linea' : ''} state={contact.state} />
           </Link>

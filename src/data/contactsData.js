@@ -38,6 +38,29 @@ const contacts = [
                 timestamp: '20:19'
             }
         ]
+    },
+    {
+        id: 3,
+        name: 'Neymar',
+        last_time_connected: 'Última vez hoy a las 10 hrs',
+        is_connected: true,
+        profile_photo: 'https://media.gq.com.mx/photos/5e94997dbb662c00085a6826/16:9/w_2560%2Cc_limit/Neymar%25201.jpg',
+        state: 'El dinero no lo es todo',
+        number: '3416789056',
+        messages: [
+            {
+                id: 1,
+                author: 'YO',
+                content: "Neymar, que tal!",
+                timestamp: '13:17'
+            },
+            {
+                id: 2,
+                author: 'Neymar',
+                content: "Hola Santiii, todo bien y vos?",
+                timestamp: '13:33'
+            }
+        ]
     }
 ]
 

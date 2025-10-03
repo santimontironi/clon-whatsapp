@@ -1,10 +1,12 @@
 import './HeaderContact.css'
 import { RiChatNewFill } from "react-icons/ri";
 import { SlOptionsVertical } from "react-icons/sl";
-import { CiSearch } from "react-icons/ci";
 import ButtonContacts from '../ButtonContacts/ButtonContacts';
+import FormSearch from '../FormSearch/FormSearch';
 
 const HeaderContact = () => {
+
+
     return (
         <header className="headerContact">
 
@@ -17,10 +19,7 @@ const HeaderContact = () => {
             </div>
 
             <div className='headerContact-bottom'>
-                <form>
-                    <input type="text" placeholder='Buscar o empezar un nuevo chat' />
-                    <CiSearch className='icon-search' color='white' fontSize={20} />
-                </form>
+                <FormSearch/>
                 <div className="headerContact-bottom-buttons">
                     <ButtonContacts text='Todos' />
                     <ButtonContacts text='No leídos' />
