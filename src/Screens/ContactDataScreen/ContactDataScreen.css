@@ -35,15 +35,18 @@
     align-items: center;
     justify-content: center;
     gap: 20px;
-    width: 90%;
+    width: 300px;
     height: auto;
     padding: 20px;
     border-radius: 10px;
+    background-color: #1E2020;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px 40px;
 }
 
 .contactDataScreen-container-content-photo{
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     border-radius: 200px;
     object-fit: cover;
     font-size: 50px;
@@ -71,30 +74,70 @@
 
 .contactDataScreen-container-content-number{
     color: #ffffff;
-    font-size: 20px;
+    font-size: 17px;
     font-weight: 500;
     display: flex;
     align-items: center;
     gap: 10px;
-    width: 400px;
+    width: 250px;
     align-items: center;
     justify-content: flex-start;
-    background-color: #252525;
+    background-color: #161717;
     padding: 10px 15px;
     border-radius: 10px;
 }
 
 .contactDataScreen-container-content-state{
     color: #ffffff;
-    font-size: 20px;
+    font-size: 17px;
     font-weight: 500;
     display: flex;
     align-items: center;
     gap: 10px;
-    width: 400px;
+    width: 250px;
     align-items: center;
     justify-content: flex-start;
-    background-color: #252525;
+    background-color: #161717;
     padding: 10px 15px;
     border-radius: 10px;
+}
+
+@media screen and (min-width:678px){
+    .contactDataScreen-container-content{
+        width: 550px;
+    }
+    .contactDataScreen-container-content-number{
+        width: 500px;
+        font-size: 18px;
+    }
+    .contactDataScreen-container-content-state{
+        width: 500px;
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width:1024px){
+    .contactDataScreen-container-content{
+        width: 700px;
+    }
+    .contactDataScreen-container-content-number{
+        width: 650px;
+        font-size: 20px;
+    }
+    .contactDataScreen-container-content-state{
+        width: 650px;
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width:1200px){
+    .contactDataScreen-container-content{
+        width: 900px;
+    }
+    .contactDataScreen-container-content-number{
+        width: 850px;
+    }
+    .contactDataScreen-container-content-state{
+        width: 850px;
+    }
 }
