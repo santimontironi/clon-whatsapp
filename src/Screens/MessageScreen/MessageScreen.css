@@ -9,7 +9,9 @@
 
 .screenMessage-content {
     position: relative;
-    overflow-y: auto; 
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -21,10 +23,9 @@
     
     .screenMessage-content {
         width: 100%;
-        height: calc(100vh - 60px);
-        padding-top: 80px;
-        padding-bottom: 60px; 
-        overflow: hidden;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
     }
     
     .screenMessage > div:first-child {
