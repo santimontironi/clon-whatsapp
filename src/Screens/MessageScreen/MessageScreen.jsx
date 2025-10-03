@@ -18,6 +18,7 @@ const ScreenMessage = () => {
         : 
         <div className="screenMessage-content">
           <ContactHeader 
+            idContact={contactDetail.id}
             photo={contactDetail.profile_photo}
             name={contactDetail.name}
             last_connection={contactDetail.last_time_connected}

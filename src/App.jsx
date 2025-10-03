@@ -3,6 +3,7 @@ import HomeScreen from "./Screens/HomeScreen/HomeScreen"
 import { BrowserRouter, Route, Routes } from "react-router"
 import { ContactListProvider } from "./Context/ContactListContext"
 import { ContactDetailProvider } from "./Context/ContactDetailContext"
+import ContactDataScreen from "./Screens/ContactDataScreen/ContactDataScreen"
 import './App.css'
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
 
             <Route element={<ContactDetailProvider/>}>
               <Route path="/contacto/:id_contacto" element={<MessageScreen />} />
+              <Route path="/contacto/:id_contacto/data" element={<ContactDataScreen />} />
             </Route>
   
           </Routes>

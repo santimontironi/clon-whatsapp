@@ -1,5 +1,5 @@
 import Message from "../Message/Message"
-import './MessagesList.css'
+
 
 const MessagesList = ({ messages }) => {
 
