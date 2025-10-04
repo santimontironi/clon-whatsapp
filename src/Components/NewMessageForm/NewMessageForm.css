@@ -1,6 +1,7 @@
 .newMessageForm {
     position: absolute;
     bottom: 10px;
+    left: 14px;
     width: 500px;
     z-index: 10;
 }
