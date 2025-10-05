@@ -27,11 +27,12 @@ export const ContactDetailProvider = () => {
 
 
     const onCreateNewMessage = (new_message) => {
+        const now = new Date()
         if (!new_message) return
         const new_message_object = {
             content: new_message,
             author: 'YO',
-            timestamp: '19:00',
+            timestamp: '' + now.getHours() + ':' + (now.getMinutes()),
             id: contactDetail.messages.length + 1
         }
         const messages_cloned = [...contactDetail.messages, new_message_object]
