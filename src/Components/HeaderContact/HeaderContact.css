@@ -24,6 +24,7 @@
    flex-direction: row;
    align-items: center;
    gap: 20px;
+   position: relative;
 }
 
 .headerContact-top .headerContact-top-icons .headerContact-top-icons-icon {

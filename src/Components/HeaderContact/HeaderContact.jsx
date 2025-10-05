@@ -3,9 +3,21 @@ import { RiChatNewFill } from "react-icons/ri";
 import { SlOptionsVertical } from "react-icons/sl";
 import ButtonContacts from '../ButtonContacts/ButtonContacts';
 import FormSearch from '../FormSearch/FormSearch';
+import Modal from '../Modal/Modal';
+import { useState } from 'react';
 
 const HeaderContact = () => {
 
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const handleModal = () => {
+        if(isModalOpen){
+            setIsModalOpen(false)
+        }
+        else{
+            setIsModalOpen(true)
+        }
+    };
 
     return (
         <header className="headerContact">
@@ -14,7 +26,8 @@ const HeaderContact = () => {
                 <span>WhatsApp</span>
                 <div className="headerContact-top-icons">
                     <RiChatNewFill color='white' fontSize={20} className='headerContact-top-icons-icon' />
-                    <SlOptionsVertical color='white' fontSize={20} className='headerContact-top-icons-icon' />
+                    <SlOptionsVertical onClick={handleModal} color='white' fontSize={20} className='headerContact-top-icons-icon' />
+                    {isModalOpen && <Modal />}
                 </div>
             </div>
 
@@ -27,6 +40,7 @@ const HeaderContact = () => {
                     <ButtonContacts text='Grupos' />
                 </div>
             </div>
+            
         </header>
     )
 }
