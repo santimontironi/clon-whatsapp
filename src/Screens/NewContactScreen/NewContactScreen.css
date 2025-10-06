@@ -1,0 +1,206 @@
+.newContactScreen {
+    background-color: #111b21;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+}
+
+.newContactScreen-header {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.newContactScreen-welcome{
+    text-align: center;
+    color: #e9edef;
+    margin-bottom: 10px;
+}
+
+.newContactScreen-content {
+    background-color: #202c33;
+    border-radius: 8px;
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.newContactScreen-content-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.newContactScreen-content-form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.newContactScreen-content-form-field label {
+    color: #8696a0;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.newContactScreen-content-form-field input {
+    background-color: #2a3942;
+    border: 1px solid #3d4b54;
+    border-radius: 8px;
+    padding: 12px 16px;
+    color: #e9edef;
+    font-size: 15px;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.newContactScreen-content-form-field input:focus {
+    border-color: #00a884;
+    background-color: #2a3942;
+}
+
+.newContactScreen-content-form-field input::placeholder {
+    color: #8696a0;
+}
+
+.newContactScreen-content-form button {
+    background-color: #00a884;
+    color: #111b21;
+    border: none;
+    border-radius: 8px;
+    padding: 14px 20px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-top: 10px;
+}
+
+.newContactScreen-content-form button:hover {
+    background-color: #06cf9c;
+    transform: translateY(-1px);
+}
+
+.newContactScreen-content-form button:active {
+    transform: translateY(0);
+}
+
+.newContactScreen-content-form button:disabled {
+    background-color: #8696a0;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.newContactScreen-content-form-field input {
+    border-color: #e53e3e;
+}
+
+.newContactScreen-content-form-field input {
+    border-color: #38a169;
+}
+
+@media (min-width: 768px) {
+    .newContactScreen {
+        padding: 40px;
+    }
+
+    .newContactScreen-content {
+        padding: 30px;
+        border-radius: 12px;
+        max-width: 450px;
+    }
+
+    .newContactScreen-content-form {
+        gap: 24px;
+    }
+
+    .newContactScreen-content-form-field input {
+        padding: 14px 18px;
+        font-size: 16px;
+        border-radius: 10px;
+    }
+
+    .newContactScreen-content-form-field label {
+        font-size: 15px;
+    }
+
+    .newContactScreen-content-form button {
+        padding: 16px 24px;
+        font-size: 16px;
+        border-radius: 10px;
+    }
+}
+
+
+@media (min-width: 1200px) {
+    .newContactScreen {
+        padding: 60px;
+    }
+
+    .newContactScreen-content {
+        padding: 40px;
+        max-width: 500px;
+        border-radius: 16px;
+    }
+
+    .newContactScreen-content-form {
+        gap: 28px;
+    }
+
+    .newContactScreen-content-form-field input {
+        padding: 16px 20px;
+        font-size: 17px;
+    }
+
+    .newContactScreen-content-form-field label {
+        font-size: 16px;
+    }
+
+    .newContactScreen-content-form button {
+        padding: 18px 28px;
+        font-size: 17px;
+        font-weight: 700;
+    }
+}
+
+@media (min-width: 1440px) {
+    .newContactScreen {
+        padding: 80px;
+    }
+
+    .newContactScreen-content {
+        padding: 50px;
+        max-width: 550px;
+        border-radius: 20px;
+    }
+
+    .newContactScreen-content-form {
+        gap: 32px;
+    }
+
+    .newContactScreen-content-form-field input {
+        padding: 18px 22px;
+        font-size: 18px;
+        border-radius: 12px;
+    }
+
+    .newContactScreen-content-form-field label {
+        font-size: 17px;
+        margin-bottom: 6px;
+    }
+
+    .newContactScreen-content-form button {
+        padding: 20px 32px;
+        font-size: 18px;
+        border-radius: 12px;
+        margin-top: 15px;
+    }
+}

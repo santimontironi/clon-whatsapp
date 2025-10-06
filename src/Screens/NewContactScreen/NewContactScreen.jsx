@@ -2,18 +2,20 @@ import './NewContactScreen.css'
 import { useContext } from 'react'
 import { ContactListContext } from '../../Context/ContactListContext'
 import { useState } from 'react'
+import { Link } from 'react-router'
+import { IoArrowBackOutline } from 'react-icons/io5'
 
 const NewContactScreen = () => {
 
-    const[inputName,setInputName] = useState("")
-    const[inputNumber,setInputNumber] = useState("")
+    const [inputName, setInputName] = useState("")
+    const [inputNumber, setInputNumber] = useState("")
 
-    const {addContact} = useContext(ContactListContext)
+    const { addContact } = useContext(ContactListContext)
 
-    function handleSubmit(e){
+    function handleSubmit(e) {
         e.preventDefault()
 
-        if(inputName === '' || inputNumber === '') return
+        if (inputName === '' || inputNumber === '') return
 
         const contactToAdd = {
             name: inputName,
@@ -27,6 +29,15 @@ const NewContactScreen = () => {
 
     return (
         <div className="newContactScreen">
+            <header className='newContactScreen-header'>
+                <Link to="/">
+                    <IoArrowBackOutline className="contactDataScreen-container-header-icon" color="#ffffff" size={30} />
+                </Link>
+            </header>
+            <div className="newContactScreen-welcome">
+                <h1>Agregar Contacto</h1>
+                <p>Completa los datos para agregar un nuevo contacto</p>
+            </div>
             <div className="newContactScreen-content">
                 <form className='newContactScreen-content-form' onSubmit={handleSubmit}>
                     <div className="newContactScreen-content-form-field">
@@ -39,7 +50,7 @@ const NewContactScreen = () => {
                     </div>
                     <button type='submit'>Agregar contacto</button>
                 </form>
-            </div> 
+            </div>
         </div>
     )
 }
