@@ -34,6 +34,7 @@
     flex-direction: column;
     gap: 3px;
     color: #fff;
+    cursor: pointer;
 }
 
 .contactHeader-content-functions {
@@ -55,14 +56,6 @@
 
 .contactHeader-content-userData-data-name{
     color: #fff;
-}
-
-.contactHeader-content-userData-data-link{
-    color: #fff;
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
 }
 
 

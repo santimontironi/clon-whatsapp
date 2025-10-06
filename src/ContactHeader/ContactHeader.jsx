@@ -3,9 +3,23 @@ import { SlOptionsVertical } from "react-icons/sl";
 import { IoSearchOutline } from "react-icons/io5";
 import { IoArrowBackOutline } from "react-icons/io5";
 import { Link } from "react-router";
+import { useState } from "react";
+import ContactData from "../Components/ContactData/ContactData"
 import './ContactHeader.css'
 
-const ContactHeader = ({ idContact, photo, name, last_connection, is_connected }) => {
+const ContactHeader = ({ photo, name, last_connection, number, state, is_connected }) => {
+
+    const [open, setOpen] = useState(false)
+
+    const contact = {
+        photo: photo,
+        name: name,
+        last_connection: last_connection,
+        is_connected: is_connected,
+        state: state,
+        number: number
+    }
+
     return (
         <header className="contactHeader">
             <div className="contactHeader-content">
@@ -14,15 +28,13 @@ const ContactHeader = ({ idContact, photo, name, last_connection, is_connected }
                         <IoArrowBackOutline size={22} color="#fff" />
                     </Link>
                     <img src={photo} alt="profile_photo" />
-                    <div className='contactHeader-content-userData-data'>
-                        <Link className="contactHeader-content-userData-data-link" to={`/contacto/${idContact}/data`} >
-                            <span className="contactHeader-content-userData-data-name">{name}</span>
-                            {is_connected ? (
-                                <span className='contactHeader-content-userData-data-is_connected'>En linea</span>
-                            ) : (
-                                <span className='contactHeader-content-userData-data-last_connection'>{last_connection}</span>
-                            )}
-                        </Link>
+                    <div className='contactHeader-content-userData-data' onClick={() => { setOpen(!open) }}>
+                        <span className="contactHeader-content-userData-data-name">{name}</span>
+                        {is_connected ? (
+                            <span className='contactHeader-content-userData-data-is_connected'>En linea</span>
+                        ) : (
+                            <span className='contactHeader-content-userData-data-last_connection'>{last_connection}</span>
+                        )}
                     </div>
                 </div>
                 <div className="contactHeader-content-functions">
@@ -31,7 +43,11 @@ const ContactHeader = ({ idContact, photo, name, last_connection, is_connected }
                     <SlOptionsVertical size={25} color="#fff" />
                 </div>
             </div>
+
+            {open && <ContactData contact={contact} />}
         </header>
+
+
     )
 }
 

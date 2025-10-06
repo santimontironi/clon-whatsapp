@@ -18,11 +18,12 @@ const ScreenMessage = () => {
         : 
         <div className="screenMessage-content">
           <ContactHeader 
-            idContact={contactDetail.id}
             photo={contactDetail.profile_photo}
             name={contactDetail.name}
             last_connection={contactDetail.last_time_connected}
             is_connected={contactDetail.is_connected}
+            state={contactDetail.state}
+            number={contactDetail.number}
           />
           <MessagesList messages={contactDetail.messages} />
           <NewMessageForm onCreateNewMessage={onCreateNewMessage} />
