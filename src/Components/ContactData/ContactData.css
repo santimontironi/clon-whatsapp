@@ -8,10 +8,34 @@
     background-color: #ececec;
     color: black;
     z-index: 150;
+    animation: appearFromRight 0.3s ease-in-out;
+}
+
+@keyframes appearFromRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 .close {
-    display: none;
+    animation: disappearToRight 0.3s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes disappearToRight {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
 }
 
 .contactData-container-header{
