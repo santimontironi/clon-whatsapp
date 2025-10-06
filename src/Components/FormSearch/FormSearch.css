@@ -1,9 +1,9 @@
-form {
+.formSearch {
    width: 100%;
    position: relative;
 }
 
-form input {
+.formSearch input {
    width: 100%;
    padding: 15px 15px 15px 50px;
    border-radius: 40px;
@@ -12,12 +12,12 @@ form input {
    color: #fff;
 }
 
-form input:focus {
+.formSearch input:focus {
    outline: 1px solid #09ff67;
    background-color: #000;
 }
 
-form input::placeholder {
+.formSearch input::placeholder {
    color: #c7c7c7;
 }
 

@@ -2,6 +2,8 @@ import { createContext } from "react"
 import { useState, useEffect } from "react"
 import { Outlet, useParams } from "react-router"
 import { getContactById } from "../services/contactService"
+import { useContext } from "react"
+import { ContactListContext } from "./ContactListContext"
 
 export const ContactDetailContext = createContext()
 
@@ -12,18 +14,20 @@ export const ContactDetailProvider = () => {
 
     const { id_contacto } = useParams()
 
+    const {contactList} = useContext(ContactListContext)
+
 
     useEffect(() => {
         function loadContactById() {
             setLoading(true)
             setTimeout(() => {
-                const contact = getContactById(id_contacto)
-                setContactDetail(contact)
+                const contactFind = contactList.find(contact => contact.id === parseInt(id_contacto))
+                setContactDetail(contactFind)
                 setLoading(false)
             }, 1000)
         }
         loadContactById()
-    }, [id_contacto])
+    }, [id_contacto, contactList])
 
 
     const onCreateNewMessage = (new_message) => {

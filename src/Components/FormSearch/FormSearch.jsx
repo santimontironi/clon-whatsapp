@@ -16,7 +16,7 @@ const FormSearch = () => {
     };
 
     return (
-        <form onSubmit={(e) => e.preventDefault()}>
+        <form className="formSearch" onSubmit={(e) => e.preventDefault()}>
             <input type="text" name='search' placeholder='Buscar o empezar un nuevo chat' onChange={handleSearch} value={searchTerm} />
             <CiSearch className='icon-search' color='white' fontSize={20} />
         </form>
