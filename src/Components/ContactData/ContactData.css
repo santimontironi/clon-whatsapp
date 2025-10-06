@@ -81,3 +81,21 @@
     padding-bottom: 6px;
     border-bottom: solid 2px #fff;
 }
+
+@media screen and (min-width:678px){
+    .contactData{
+        width: 350px;
+        left: initial;
+        bottom: 20%;
+        border-bottom-left-radius: 20px;
+    }
+}
+
+@media screen and (min-width:1200px){
+    .contactData{
+        width: 400px;
+        left: initial;
+        bottom: 30%;
+        border-bottom-left-radius: 20px;
+    }
+}
