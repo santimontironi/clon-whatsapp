@@ -15,7 +15,7 @@ const ContactList = () => {
     <div className="contactList">
       {loading ? <div className="loader"><BeatLoader color="#fff"/></div> :
         contactsToShow.map((contact) => (
-          <Link to={`/contacto/` + contact.id} key={contact.id}>
+          <Link className="contactList-link" to={`/contacto/` + contact.id} key={contact.id}>
             <Contact photoProfile={contact.profile_photo} name={contact.name} last_time={contact.last_time_conneceted} isConnected={contact.is_connected ? 'En linea' : ''} state={contact.state} />
           </Link>
         ))

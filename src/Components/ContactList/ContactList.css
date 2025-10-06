@@ -3,3 +3,7 @@
     flex-direction: column;
     gap: 16px;
 }
+
+.contactList-link{
+    text-decoration: none;
+}

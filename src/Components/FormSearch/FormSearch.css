@@ -27,3 +27,14 @@
    top: 50%;
    transform: translateY(-50%);
 }
+
+@media screen and ((min-width: 300px) and (max-width: 374px)) {
+   .formSearch input {
+      padding: 10px 10px 10px 40px;
+      font-size: 12px;
+   }
+
+   .icon-search {
+      left: 10px;
+   }
+}

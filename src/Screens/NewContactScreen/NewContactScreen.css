@@ -30,6 +30,18 @@
     width: 100%;
     max-width: 400px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    animation: appear 0.5s ease-in-out;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .newContactScreen-content-form {

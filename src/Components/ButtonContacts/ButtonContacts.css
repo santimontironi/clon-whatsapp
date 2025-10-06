@@ -1,4 +1,4 @@
-.buttonContacts{
+.buttonContacts {
     border: solid 2px #2f3030;
     border-radius: 20px;
     padding: 8px;
@@ -6,19 +6,30 @@
     color: #929191;
     font-size: 14px;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.buttonContacts:hover{
+.buttonContacts:hover {
     background-color: #353535;
 }
 
-.buttonContacts:first-child{
+.buttonContacts:first-child {
     background-color: #103529;
     color: #4fff92;
 }
 
-@media screen and ((min-width: 300px) and (max-width: 500px)) {
-    .buttonContacts{
+@media screen and ((min-width: 300px) and (max-width: 374px)) {
+    .buttonContacts {
+        font-size: 9px;
+        padding: 6px;
+        width: 50px;
+    }
+}
+
+@media screen and ((min-width: 375px) and (max-width: 500px)) {
+    .buttonContacts {
         font-size: 10px;
         padding: 7px;
         width: 65px;
