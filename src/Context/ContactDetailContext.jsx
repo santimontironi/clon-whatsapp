@@ -1,7 +1,6 @@
 import { createContext } from "react"
 import { useState, useEffect } from "react"
 import { Outlet, useParams } from "react-router"
-import { getContactById } from "../services/contactService"
 import { useContext } from "react"
 import { ContactListContext } from "./ContactListContext"
 
