@@ -2,7 +2,7 @@ import './NewContactScreen.css'
 import { useContext } from 'react'
 import { ContactListContext } from '../../Context/ContactListContext'
 import { useState } from 'react'
-import { Link } from 'react-router'
+import { Link, useNavigate } from 'react-router'
 import { IoArrowBackOutline } from 'react-icons/io5'
 
 const NewContactScreen = () => {
@@ -11,6 +11,8 @@ const NewContactScreen = () => {
     const [inputNumber, setInputNumber] = useState("")
 
     const { addContact } = useContext(ContactListContext)
+
+    const navigate = useNavigate()
 
     function handleSubmit(e) {
         e.preventDefault()
@@ -25,6 +27,8 @@ const NewContactScreen = () => {
         addContact(contactToAdd)
         setInputName("")
         setInputNumber("")
+
+        navigate('/')
     }
 
     return (
