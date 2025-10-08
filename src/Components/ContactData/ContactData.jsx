@@ -18,11 +18,12 @@ const ContactData = ({ contact }) => {
                     <figure className="contactData-container-content-photo">
                         <img className="contactData-container-content-photo-img" src={contact.photo} alt={`Foto de perfil de ${contact.name}`} />
                     </figure>
-                    <div className="contactData-container-content-info">
-                        <span className="contactData-container-content-name">{contact.name}</span>
-                        <span className="contactData-container-content-number">Teléfono: {contact.number}</span>
-                        <span className="contactData-container-content-state">Estado: {contact.state}</span>
-                    </div>
+                    <span className="contactData-container-content-name">{contact.name}</span>
+                    <span className="contactData-container-content-number">{contact.number}</span>
+                </div>
+                <div className="contactData-container-state">
+                    <span className="contactData-container-state-title">Info.</span>
+                    <span className="contactData-container-state-content">{contact.state}</span>
                 </div>
             </div>
 
