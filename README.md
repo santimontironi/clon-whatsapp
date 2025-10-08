@@ -88,8 +88,6 @@ Este proyecto permitió consolidar los siguientes conocimientos:
 
 ## Autor
 
-** Santiago Montironi **
-
 **Santiago Montironi**  
 Estudiante de la Diplomatura en Desarrollo Full Stack  
 **Universidad Tecnológica Nacional - Facultad Regional Buenos Aires**
