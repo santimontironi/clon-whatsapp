@@ -90,12 +90,6 @@ Este proyecto permitió consolidar los siguientes conocimientos:
 
 ---
 
-## Despliegue
-
-https://clon-whatsapp-sm.vercel.app/
-
----
-
 ## Autor
 
 **Santiago Montironi**  
