@@ -2,8 +2,6 @@
 
 ## Diplomatura Full Stack - Universidad Tecnológica Nacional (UTN) Buenos Aires  
 
----
-
 ## Despliegue:
 
 https://clon-whatsapp-sm.vercel.app/
