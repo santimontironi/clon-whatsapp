@@ -10,7 +10,7 @@ https://clon-whatsapp-sm.vercel.app/
 
 ## Descripción del Proyecto  
 
-Este proyecto consiste en la creación de una **aplicación web tipo clon de WhatsApp**, desarrollada como entrega final del módulo **Frontend** de la Diplomatura en Desarrollo Full Stack de la UTN Buenos Aires.  
+Este proyecto consiste en la creación de una aplicación web **clon de WhatsApp**, desarrollada como entrega final del módulo **Frontend** de la Diplomatura en Desarrollo Full Stack de la UTN Buenos Aires.  
 
 El objetivo del trabajo fue poner en práctica los conocimientos adquiridos durante el curso, aplicando los principales conceptos de **React**, manejo de estados, componentes, contextos y efectos, junto con el uso de **CSS puro** para la maquetación y estilos.  
 
